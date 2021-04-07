@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- booking_service.teams tree view -->
+        <record id="booking_service_teams_view_tree" model="ir.ui.view">
+            <field name="name">booking_service.teams.view.tree</field>
+            <field name="model">booking_service.teams</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <!-- Add your fields here -->
+                    <field name="team_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- booking_service.teams form view -->
+        <record id="booking_service_teams_view_form" model="ir.ui.view">
+            <field name="name">Teams</field>
+            <field name="model">booking_service.teams</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="team_name"/>
+                            <field name="team_leader"/>
+                        </group>
+                        <notebook>
+                            <page string="Employees" name="employees">
+                                <field name="employee_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <!-- <tree string="Idea list">
+                            <field name="name"/>
+                        </tree> -->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Add you code here -->
+        <record id="booking_service_teams_action" model="ir.actions.act_window">
+            <field name="name">Teams</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">booking_service.teams</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK --> 
+                </p>
+            </field>
+        </record>
+
+    </data><!-- This Menu Item must have a parent and an action -->
+    <menuitem id="booking_service_teams_menu_act" name="Teams" parent="booking_service_master_menu_categ" action="booking_service_teams_action" sequence="10"/>
+</odoo>
