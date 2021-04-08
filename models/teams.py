@@ -12,6 +12,7 @@ class Teams(models.Model):
     
     
     
+    
 
 
 class Employees(models.Model):
@@ -19,13 +20,7 @@ class Employees(models.Model):
     _description = "Employees"
 
     name = fields.Many2one(comodel_name='res.users', string='Employee', required=True)
-
-
-# class Employees(models.Model):
-#     _inherit = 'res.users'
-
-    # name = fields.Char(string='Name')
-
+    
     
 
     
