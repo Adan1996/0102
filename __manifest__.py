@@ -31,7 +31,8 @@
         'views/product_template.xml',
         'views/calendar_events.xml',
         'views/events.xml',
-        'views/serial_number.xml'
+        'views/serial_number.xml',
+        'views/is_a_booking.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -9,13 +9,6 @@ class Teams(models.Model):
     team_leader = fields.Many2one(comodel_name='res.users', string='Team Leader')
     employee_ids = fields.One2many(comodel_name='booking_service.employees', inverse_name='employee_id', string="Employees")
     equipment_ids = fields.One2many(comodel_name='booking_service.equipments', inverse_name='equipment_id', string='Equipments')
-    
-    
-    
-    
-    
-    
-
 
 class Employees(models.Model):
     _name = 'booking_service.employees'

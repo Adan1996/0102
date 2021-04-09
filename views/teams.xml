@@ -15,7 +15,7 @@
 
         <!-- booking_service.teams form view -->
         <record id="booking_service_teams_view_form" model="ir.ui.view">
-            <field name="name">Teams</field>
+            <field name="name">Team</field>
             <field name="model">booking_service.teams</field>
             <field name="arch" type="xml">
                 <form string="">
@@ -44,7 +44,6 @@
                                 </field>
                             </tree>
                         </group>
-
                     </sheet>
                 </form>
             </field>
