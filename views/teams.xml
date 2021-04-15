@@ -7,7 +7,6 @@
             <field name="model">booking_service.teams</field>
             <field name="arch" type="xml">
                 <tree>
-                    <!-- Add your fields here -->
                     <field name="team_name"/>
                 </tree>
             </field>

@@ -13,9 +13,24 @@
                     <field name="is_a_booking"/>
                 </field>
                 <field name="partner_id" position="after">
-                    <field name="team" attrs="{'invisible': [('is_a_booking', '=', False)]}">
-                        <field name="display_name"/>
+                    <field name="team" attrs="{'invisible': [('is_a_booking', '=', False)]}"/>
+                    <field name="team_leader" attrs="{'invisible': [('is_a_booking', '=', False)]}"/>
+                    <field name="employee_ids" attrs="{'invisible': [('is_a_booking', '=', False)]}">
+                        <tree editable="bottom">
+                            <field name="name"/>
+                        </tree>
                     </field>
+                    <field name="equipment_ids" attrs="{'invisible': [('is_a_booking', '=', False)]}">
+                        <tree editable="bottom">
+                            <field name="product"/>
+                            <field name="serial_no"/>
+                        </tree>
+                    </field>
+                </field>
+
+                <field name="payment_term_id" position="after">
+                    <field name="booking_start"/>
+                    <field name="booking_end"/>
                 </field>
             </field>
         </record>

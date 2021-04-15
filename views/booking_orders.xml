@@ -1,17 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <data>
-        <!-- Add you code here -->
-        <!-- booking_service.booking_orders action window -->
+        <!-- sale.order action window -->
         <record id="booking_service_booking_orders_action" model="ir.actions.act_window">
             <field name="name">Booking Order</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">booking_service.booking_orders</field>
+            <!-- <field name="res_model">sale.order</field> -->
+            <field name="res_model">sale.order</field>
             <field name="view_mode">tree,form</field>
             <field name="view_type">form</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     <!-- Add Text Here -->
+                    
                 </p><p>
                     <!-- More details about what a user can do with this object will be OK --> 
                 </p>
@@ -19,5 +20,5 @@
         </record>
 
     </data><!-- This Menu Item must have a parent and an action -->
-    <menuitem id="booking_service_booking_orders_menu_act" name="Booking Order" parent="booking_service_master_menu_categ" action="booking_service_booking_orders_action" sequence="10"/>
+    <menuitem id="booking_service_booking_orders_menu_act" name="Booking Order" parent="booking_service_master_menu_categ" action="booking_service_booking_orders_action" sequence="20"/>
 </odoo>
